@@ -31,5 +31,4 @@ type Move = (Peg, Peg)
 hanoi :: Integer -> Peg -> Peg -> Peg -> [Move]
 hanoi n s d t
   | n <= 0    = []
-  | n == 1    = [(s, d)]
   | otherwise = hanoi (n - 1) s t d ++ [(s, d)] ++ hanoi (n - 1) t d s
