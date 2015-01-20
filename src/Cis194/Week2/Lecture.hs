@@ -56,7 +56,7 @@ brent' :: Person'
 brent' = Person' "Brent" 31 SealingWax
 
 stan :: Person
-stan  = Person "Stan" 94 Cabbage
+stan = Person "Stan" 94 Cabbage
 
 getAge :: Person -> Int
 getAge (Person _ a _) = a
