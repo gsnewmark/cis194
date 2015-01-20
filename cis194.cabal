@@ -1,6 +1,6 @@
 name:                cis194
 version:             0.1.0.0
-synopsis:            A playground & HW assingments for Brent Yorgey's CIS 194
+synopsis:            A playground & HW assignments for Brent Yorgey's CIS 194
 homepage:            https://github.com/gsnewmark/cis194
 license:             Apache-2.0
 license-file:        LICENSE
@@ -23,4 +23,5 @@ library
                        Cis194.Week2.LogAnalysis
                        Cis194.Week3.Lecture
                        Cis194.Week3.Golf
+                       Cis194.Week4.Lecture
   default-language:    Haskell2010
