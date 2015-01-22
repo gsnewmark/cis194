@@ -25,5 +25,7 @@ library
                        Cis194.Week3.Golf
                        Cis194.Week4.Lecture
                        Cis194.Week4.Assignment
+                       Cis194.Week5.Lecture
+                       Cis194.Week5.Calc
   other-modules:       Log
   default-language:    Haskell2010
