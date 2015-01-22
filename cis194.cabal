@@ -27,5 +27,7 @@ library
                        Cis194.Week4.Assignment
                        Cis194.Week5.Lecture
                        Cis194.Week5.Calc
+                       Cis194.Week6.Lecture
+                       Cis194.Week6.Fibonacci
   other-modules:       Log
   default-language:    Haskell2010
