@@ -1,7 +1,10 @@
+{-# LANGUAGE FlexibleInstances, TypeSynonymInstances #-}
 module Cis194.Week7.JoinList where
 
 import Data.Monoid
 
+import Buffer
+import Cis194.Week7.Scrabble
 import Sized
 
 data JoinList m a = Empty
@@ -47,4 +50,22 @@ takeJ i (Append _ l r)
    | otherwise  = l +++ takeJ (i - ls) r
    where ls = jSize l
 takeJ _ jl               = jl
+
+scoreLine :: String -> JoinList Score String
+scoreLine s = Single (scoreString s) s
+
+jlToList :: JoinList m a -> [a]
+jlToList Empty            = []
+jlToList (Single _ a)     = [a]
+jlToList (Append _ l1 l2) = jlToList l1 ++ jlToList l2
+
+instance Buffer (JoinList (Score, Size) String) where
+  toString     = unlines . jlToList
+  fromString   = foldr (+++) Empty . map (\x -> Single (scoreString x, Size 1) x) . lines
+  line         = indexJ
+  replaceLine n l b = p +++ Single (scoreString l, Size 1) l +++ s
+      where p = takeJ n b
+            s = dropJ (n + 1) b
+  numLines     = jSize
+  value        = getScore . xscore . tag
 
