@@ -16,7 +16,8 @@ source-repository head
 
 library
   hs-source-dirs:      src
-  build-depends:       base >=4.7 && <4.8
+  build-depends:       base       >= 4.7     && < 4.8,
+                       containers >= 0.5.0.0 && < 0.6
   exposed-modules:     Cis194.Week1.Lecture
                        Cis194.Week1.Assignment
                        Cis194.Week2.Lecture
@@ -32,4 +33,6 @@ library
                        Cis194.Week7.Lecture
                        Cis194.Week7.JoinList
                        Cis194.Week7.Scrabble
+                       Cis194.Week8.Lecture
+                       Cis194.Week8.Party
   default-language:    Haskell2010
