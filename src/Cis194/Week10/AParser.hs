@@ -67,7 +67,7 @@ instance Applicative Parser where
           f Nothing        = Nothing
 
 abParser :: Parser (Char, Char)
-abParser = (\a b -> (a,b)) <$> char 'a' <*> char 'b'
+abParser = (,) <$> char 'a' <*> char 'b'
 
 abParser_ :: Parser ()
 abParser_ = const () <$> abParser

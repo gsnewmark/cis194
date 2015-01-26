@@ -38,4 +38,6 @@ library
                        Cis194.Week9.Lecture
                        Cis194.Week10.Lecture
                        Cis194.Week10.AParser
+                       Cis194.Week11.Lecture
+                       Cis194.Week11.SExpr
   default-language:    Haskell2010
