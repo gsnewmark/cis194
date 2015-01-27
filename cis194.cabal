@@ -16,8 +16,9 @@ source-repository head
 
 library
   hs-source-dirs:      src
-  build-depends:       base       >= 4.7     && < 4.8,
-                       containers >= 0.5.0.0 && < 0.6
+  build-depends:       base        >= 4.7     && < 4.8,
+                       containers  >= 0.5.0.0 && < 0.6,
+                       MonadRandom >= 0.3.0.1 && < 0.4
   exposed-modules:     Cis194.Week1.Lecture
                        Cis194.Week1.Assignment
                        Cis194.Week2.Lecture
@@ -40,4 +41,6 @@ library
                        Cis194.Week10.AParser
                        Cis194.Week11.Lecture
                        Cis194.Week11.SExpr
+                       Cis194.Week12.Lecture
+                       Cis194.Week12.Risk
   default-language:    Haskell2010
